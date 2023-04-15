@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <form method="post" action="/login">
+            <h1>Log in</h1>
+            <input type="email" name="email" id="" placeholder="Email" value="<%=locals.email %>">
+            <input type="password" name="password" placeholder="Password" />
+            <button type="submit">Log in</button>
+
+            <% if (locals.message) { %>
+                <div class="primary-msg">
+                    <%=locals.message %><br>
+                </div>
+                <%} %>
+
+                    <a href="/register" class="secondary-msg">Register Here</a>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
